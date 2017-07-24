@@ -1,2 +1,3 @@
 org.isisaddons.wicket.wickedcharts.cpt.ui.scalarchart.StandaloneValueAsWickedChartFactory
+org.isisaddons.wicket.wickedcharts.cpt.ui.entitychart.ScalarValueAsPopChartFactory
 org.isisaddons.wicket.wickedcharts.cpt.ui.summarychart.CollectionContentsAsSummaryChartFactory
