@@ -24,7 +24,7 @@ import org.apache.isis.applib.adapters.ValueSemanticsProvider;
 /**
  * For internal use; allows Isis to parse etc.
  */
-public class WickedChartSemanticsProvider implements ValueSemanticsProvider<WickedChart> {
+public class PopChartSemanticsProvider implements ValueSemanticsProvider<PopChart> {
 
 	public boolean isEqualByContent() {
 		return true;
@@ -34,25 +34,25 @@ public class WickedChartSemanticsProvider implements ValueSemanticsProvider<Wick
 		return true;
 	}
 
-    public Parser<WickedChart> getParser() {
+    public Parser<PopChart> getParser() {
         return null;
     }
 
-    public EncoderDecoder<WickedChart> getEncoderDecoder() {
+    public EncoderDecoder<PopChart> getEncoderDecoder() {
         // TODO: reconstitute
-        return new EncoderDecoder<WickedChart>() {
+        return new EncoderDecoder<PopChart>() {
 
-            public String toEncodedString(WickedChart toEncode) {
+            public String toEncodedString(PopChart toEncode) {
                 return Base64Serializer.toString(toEncode);
             }
 
-            public WickedChart fromEncodedString(String encodedString) {
-                return (WickedChart) Base64Serializer.fromString(encodedString);
+            public PopChart fromEncodedString(String encodedString) {
+                return (PopChart) Base64Serializer.fromString(encodedString);
             }
         };
     }
 
-    public DefaultsProvider<WickedChart> getDefaultsProvider() {
+    public DefaultsProvider<PopChart> getDefaultsProvider() {
         return null;
     }
 
